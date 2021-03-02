@@ -5,7 +5,7 @@ Excelが動かない環境だったのでしゃーなしに...
 
 # Screenshot
 
-![plot](https://github.com/soundscope/OsakaUniv_GPA_calculator/blob/main/screenshot.png?raw=true)
+![plot](https://github.com/soundscope/GPA_calculator_for_OsakaUniv/blob/master/screenshot.png?raw=true)
 
 # Requirement
  
