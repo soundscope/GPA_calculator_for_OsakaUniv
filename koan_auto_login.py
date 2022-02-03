@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*- 
 #===============================================================================
 # Date created  : 2022-02-03T05:43:38+09:00
-# Date modified : 2022-02-03T08:37:56+09:00
+# Date modified : 2022-02-03T09:25:39+09:00
 # Author        : soundscope
 # Description   : login in to KOAN by python, released under MIT License
 # Disclaimer    : NO WARRANTY; Everything is at your own risk.
@@ -140,8 +140,8 @@ def get_CSVscore(session):
             "_eventId": "execCsv",
             }
     score_data = session.post(url_flow2, data=json_data, cookies=res_cookie, headers=headers)
-    print(score_data.text)
-    print('finished getting scores!')
+    with open('score.csv', 'w') as f: f.write(score_data.text)
+    print('finished getting scores! > score.csv')
 
 def logout(session):
     url_logout = 'https://koan.osaka-u.ac.jp/campusweb/campussquare.do?_flowId=USW0009100-flow'
@@ -153,5 +153,5 @@ def logout(session):
     if USE_SAVE_LOAD_SESSION: save_cookies(s)
 
 #get_CSVscore(s)
-get_score(s)
+#get_score(s)
 #logout(s)
